@@ -6,12 +6,12 @@ This repository contains the code, data, and analysis for my dissertation on tun
 ## Motivation
 The exponential growth of big data has necessitated approximate algorithms like HLL, which efficiently estimate the cardinality of large data streams. However, the accuracy and memory efficiency of the HLL algorithm is highly dependent on the bucket parameter kk (which determines the number of buckets m=2km=2k). This repository presents a heuristic for tuning kk based on analyzing the distribution of zeros in hash values.
 
-##Methodology
+## Methodology
 
-###Data Collection:
+### Data Collection:
 - Simulated a large dataset of 10,000 hash values with 5,001 unique entries to represent a typical stream of data. From this set, multiple smaller samples were extracted (sizes: 5, 10, 100, 500, 750, and 1,000) to evaluate the behavior of the algorithm across varying conditions.
 
-###Heuristic Definition:
+### Heuristic Definition:
 The heuristic is based on comparing the empirical proportion of zeros at different bit positions of the hash values with the expected binomial distribution Binomial(n,12k)Binomial(n,2k1​). The optimal number of buckets is determined by identifying the point where the empirical proportion aligns with the theoretical binomial proportion, indicating that the hash values are uniformly distributed across the buckets.
 
 ### Algorithmic Changes:
