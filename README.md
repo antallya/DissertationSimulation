@@ -35,5 +35,9 @@ cd buld
 cmake ..
 make
 ```
-# Libraries Used
+## Libraries Used
 [libcount](https://github.com/dialtr/libcount)
+
+## References
+- Flajolet, P., Fusy, É., Gandouet, O., & Meunier, F. (2007). HyperLogLog: The analysis of a near-optimal cardinality estimation algorithm.
+- Google Research: Data Sketching Algorithms for Big Data Applications
